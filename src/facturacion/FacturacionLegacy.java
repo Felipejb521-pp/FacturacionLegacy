@@ -8,12 +8,11 @@ public class FacturacionLegacy {
     private static final double DESCUENTO_ESTANDAR = 0.05;
 
     /**
-     * Calcula el total a pagar por un cliente aplicando su descuento correspondiente.
-     *
-     * @param importeBase  Importe bruto de la factura antes de aplicar descuentos.
-     * @param tipoCliente  Categoría del cliente
-     * @param esSocioVip   Indica si el cliente VIP tiene descuento extra 
-     * @return             Importe final con el descuento aplicado
+     * 
+     * @param importeBase Importe bruto de la factura antes de aplicar descuentos.
+     * @param tipoCliente Categoría del cliente
+     * @param esSocioVip Indica si el cliente VIP tiene descuento extra 
+     * @return           Importe final con el descuento aplicado
      */
 
     public double calcularTotal(double importeBase, int tipoCliente, boolean esSocioVip) {
