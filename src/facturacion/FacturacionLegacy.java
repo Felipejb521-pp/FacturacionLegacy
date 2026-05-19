@@ -1,27 +1,19 @@
 package facturacion;
+
 public class FacturacionLegacy {
 
-    // 
-    private static final double DESCUENTO_VIP = 0.25;
-    private static final double DESCUENTO_SOCIO = 0.15;
-    private static final double DESCUENTO_TIPO2 = 0.05;
-
-    // Algoritmo:
-    public double calcularTotal(double importeBase, int tipoCliente, boolean esSocioVip) {
-
-                
-        if (importeBase > 0) {
-            if (tipoCliente == 1) {
-                if (esSocioVip) {
-                    return importeBase - (importeBase * DESCUENTO_VIP);
-                } else {
-                    return importeBase - (importeBase * DESCUENTO_SOCIO);
-                }
+    public double cT(double m, int tC, boolean dV) {
+        if (m > 0) {
+            if (tC == 1) {
+                if (dV == true)
+                    return m - (m * 0.25);
+                else
+                    return m - (m * 0.15);
             } else {
-                if (tipoCliente == 2) {
-                    return importeBase - (importeBase * DESCUENTO_TIPO2);
+                if (tC == 2) {
+                    return m - (m * 0.05);
                 } else {
-                    return importeBase;
+                    return m;
                 }
             }
         } else {
